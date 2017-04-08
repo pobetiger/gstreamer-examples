@@ -6,9 +6,9 @@
 
 gst-launch-1.0 \
 	udpsrc port=5000 !\
-	application/x-rtp,clock-rate=90000 !\
-		rtph264depay !\
-		avdec_h264  !\
+	application/x-rtp,clock-rate=90000,encoding-name="H263-2000" !\
+		rtph263pdepay !\
+		avdec_h263  !\
 		autovideosink
 
 # not needed any more:
